@@ -1,0 +1,107 @@
+.team-section {
+  background-color: $secondary-color;
+  @extend %section;
+}
+.team-container {
+  @extend %adaptive-container;
+}
+.team-section__title {
+  @extend %section-title;
+}
+.team-section__list {
+  @extend %list;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.team-section__item {
+  background-color: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 120px) / 4);
+  }
+}
+
+.team-section__info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team-section__name {
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  color: $primary-black-color;
+}
+
+.team-section__text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+.social-network {
+  margin-top: 16px;
+}
+
+.social-network__list {
+  display: flex;
+  justify-content: center;
+  @extend %list;
+}
+
+.social-network__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.social-network__link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  color: $secondary-grey-color;
+  background-color: $primary-white-color;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+.social-network__icon {
+  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .social-network__link:hover &,
+  .social-network__link:focus & {
+    fill: $primary-white-color;
+  }
+}
+.team-section__image {
+  width: 100%;
+}
