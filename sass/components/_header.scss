@@ -1,5 +1,6 @@
 .page-header {
   background-color: $primary-white-color;
+  position: relative;
 }
 .header-container {
   display: flex;
@@ -8,8 +9,7 @@
   border-bottom: 1px solid #ececec;
   @extend %adaptive-container;
 
-  @media screen and (max-width: 767px) {
-    position: relative;
+  @media screen and (max-width: 767.9px) {
     justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -19,10 +19,10 @@
 .page-header__button {
   border: none;
   cursor: pointer;
-  z-index: 2;
+  z-index: 5;
   background-color: transparent;
 
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
@@ -61,9 +61,10 @@
 
 .page-header__menu {
   display: flex;
+  z-index: 4;
   background-color: $primary-white-color;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     display: none;
     position: absolute;
     top: 0;
@@ -71,6 +72,7 @@
     width: 100%;
     height: 100vh;
     padding: 48px 40px;
+    overflow-y: scroll;
 
     &.is-open {
       display: flex;
@@ -89,8 +91,24 @@
   }
 }
 
+.menu-container {
+  display: flex;
+
+  @media screen and (max-width: 767.9px) {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 796px;
+    max-width: 480px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+}
 .menu-network {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     margin-top: 64px;
   }
 }
@@ -99,7 +117,7 @@
   display: none;
   @extend %list;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     display: flex;
     flex-wrap: wrap;
     margin: -10px;
@@ -158,7 +176,7 @@
   letter-spacing: 0.02em;
   line-height: 1.14;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     font-size: 40px;
     line-height: 1.17;
   }
@@ -175,7 +193,7 @@
     color: $accent-color;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     &:not(:last-child) {
       margin-bottom: 32px;
     }
@@ -226,7 +244,7 @@
 .auth-nav__list {
   @extend %list;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -262,7 +280,7 @@
   align-items: center;
   font-size: 12px;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     &:not(:first-child) {
       margin-bottom: 32px;
     }
@@ -291,7 +309,7 @@
   .auth-nav__link:focus & {
     fill: $accent-color;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     display: none;
   }
 
@@ -321,13 +339,13 @@
 }
 
 .auth-nav__email {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     font-size: 24px;
   }
 }
 
 .auth-nav__tel {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     font-size: 34px;
     color: $accent-color;
     &:hover,
