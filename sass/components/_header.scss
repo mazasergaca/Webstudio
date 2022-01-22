@@ -1,12 +1,12 @@
 .page-header {
   background-color: $primary-white-color;
+  border-bottom: 1px solid #ececec;
   position: relative;
 }
 .header-container {
   display: flex;
   align-items: center;
 
-  border-bottom: 1px solid #ececec;
   @extend %adaptive-container;
 
   @media screen and (max-width: 767.9px) {

@@ -18,21 +18,6 @@
         <a href="./index.html" class="logo">
           Web<span class="logo--black">Studio</span></a
         >
-        <button
-          type="button"
-          class="page-header__button"
-          aria-expanded="false"
-          data-menu-button
-        >
-          <svg
-            width="40px"
-            height="40px"
-            aria-label="Переключатель мобильного меню"
-          >
-            <use class="icon-cross" href="./images/icons.svg#cross"></use>
-            <use class="icon-menu" href="./images/icons.svg#menu"></use>
-          </svg>
-        </button>
 
         <div class="page-header__menu" data-menu>
           <div class="menu-container">
@@ -99,6 +84,22 @@
             </div>
           </div>
         </div>
+        <button
+          type="button"
+          class="page-header__button"
+          aria-expanded="false"
+          data-menu-button
+          data-menu-open
+        >
+          <svg
+            width="40px"
+            height="40px"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-cross" href="./images/icons.svg#cross"></use>
+            <use class="icon-menu" href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- main content -->
@@ -699,5 +700,6 @@
     </div>
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/menu-scroll.js"></script>
   </body>
 </html>
